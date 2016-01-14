@@ -12,6 +12,10 @@ A simple web application to draw shapes written in [React](https://github.com/fa
 * [ ] Don't use `Immutable.Record`,
 * [ ] Add *Text mode* to add text components.
 
+## Inspiration
+
+* [Precursor](https://precursorapp.com)
+
 ## License
 
 MIT
