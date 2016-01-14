@@ -4,8 +4,9 @@ A simple web application to draw shapes written in [React](https://github.com/fa
 
 ## Todo
 
-Order is important:
+*Order is important.*
 
+* [ ] Fix ellipsis and rect collision detection,
 * [ ] Move information about canvas transform to the state,
 * [ ] Write tests,
 * [ ] Don't use `Immutable.Record`,

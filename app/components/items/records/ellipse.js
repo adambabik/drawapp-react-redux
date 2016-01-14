@@ -47,6 +47,7 @@ export class EllipseRecord extends createShapeRecord(defaults) {
     });
   }
 
+  // TODO: it's buggy if rect is in more than one quadrant
   isInRect(rect) {
     const { x: sx1, y: sy1 } = rect;
     const sx2 = sx1 + rect.width;
@@ -61,11 +62,17 @@ export class EllipseRecord extends createShapeRecord(defaults) {
 
     if (x <= rcx && y >= rcy) {  // the first quadrant
       return sq(x - sx1) / sq(this.rx) + sq(y - sy1 - rect.height) / sq(this.ry) <= 1;
-    } else if (x >= rcx && y >= rcy) {  // the second quadrant
+    }
+
+    if (x >= rcx && y >= rcy) {  // the second quadrant
       return sq(x - sx2) / sq(this.rx) + sq(y - sy2) / sq(this.ry) <= 1;
-    } else if (x >= rcx && y < rcy) {  // the third quadrant
+    }
+
+    if (x >= rcx && y < rcy) {  // the third quadrant
       return sq(x - sx1 - rect.width) / sq(this.rx) + sq(y - sy1) / sq(this.ry) <= 1;
-    } else if (x < rcx && y < rcy) {  // the forth quadrant
+    }
+
+    if (x < rcx && y < rcy) {  // the forth quadrant
       return sq(x - sx1) / sq(this.rx) + sq(y - sy1) / sq(this.ry) <= 1;
     }
 
