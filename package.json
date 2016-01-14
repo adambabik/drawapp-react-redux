@@ -1,0 +1,67 @@
+{
+  "name": "drawapp",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "babel-polyfill": "^6.3.14",
+    "classnames": "^2.2.3",
+    "debug": "^2.2.0",
+    "immutable": "^3.7.6",
+    "isomorphic-fetch": "^2.2.0",
+    "koa": "^1.1.2",
+    "koa-bodyparser": "^2.0.1",
+    "koa-ejs": "^3.0.0",
+    "koa-router": "^5.3.0",
+    "koa-static": "^2.0.0",
+    "node-uuid": "^1.4.7",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6",
+    "react-redux": "^4.0.6",
+    "redux": "^3.0.5",
+    "redux-actions": "^0.9.0",
+    "redux-thunk": "^1.0.3",
+    "rx-lite": "^4.0.7"
+  },
+  "devDependencies": {
+    "babel-core": "^6.4.0",
+    "babel-eslint": "^5.0.0-beta6",
+    "babel-loader": "^6.2.1",
+    "babel-plugin-remove-webpack-loaders": "^0.1.1",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "chai": "^3.4.1",
+    "css-loader": "^0.23.1",
+    "eslint-plugin-react": "^3.14.0",
+    "jsdom": "^7.2.2",
+    "mocha": "^2.3.4",
+    "node-sass": "^3.4.2",
+    "react-hot-loader": "^1.3.0",
+    "redux-devtools": "^3.0.1",
+    "redux-devtools-dock-monitor": "^1.0.1",
+    "redux-devtools-log-monitor": "^1.0.1",
+    "sass-loader": "^3.1.2",
+    "sinon": "^1.17.2",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.10",
+    "webpack-dev-server": "^1.14.0"
+  },
+  "scripts": {
+    "start": "node dev-server.js",
+    "build": "./node_modules/.bin/webpack --config webpack.config.prod.js",
+    "server": "node server.js",
+    "test": "NODE_ENV=test ./node_modules/.bin/mocha --harmony --compilers js:babel-core/register --recursive ./tests",
+    "devtest": "NODE_ENV=test ./node_modules/.bin/mocha --harmony --compilers js:babel-core/register --recursive --watch ./tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dreame4/drawapp.git"
+  },
+  "author": "Adam Babik",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/dreame4/drawapp/issues"
+  },
+  "homepage": "https://github.com/dreame4/drawapp#readme"
+}

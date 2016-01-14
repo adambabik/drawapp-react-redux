@@ -1,0 +1,74 @@
+$opacity: 0.1;
+$selectedColor: #0084ff;
+$normalTextColor: rgb(150, 150, 150);
+
+::-webkit-input-placeholder { /* Safari, Chrome and Opera */
+  color: $selectedColor;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: $selectedColor;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+  color: $selectedColor;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+  color: $selectedColor;
+}
+
+::-ms-input-placeholder { /* Edge */
+  color: $selectedColor;
+}
+
+:placeholder-shown { /* Standard one last! */
+  color: $selectedColor;
+}
+
+.hidden {
+  display: none;
+}
+
+.rect,
+.ellipse {
+  stroke: #fff;
+  stroke-width: 2.0;
+  fill: rgba(255, 255, 255, $opacity);
+}
+
+.rectSelect {
+  stroke-dasharray: 5,5;
+}
+
+.text {
+  text {
+    fill: $normalTextColor;
+    stroke-width: 0;
+    font-family: sans-serif;
+    text-anchor: left;
+    alignment-baseline: middle;
+  }
+
+  input {
+    background: transparent;
+    border: 0;
+    color: $normalTextColor;
+    font-family: sans-serif;
+    outline: 0;
+  }
+}
+
+.selected {
+  stroke: $selectedColor;
+  fill: rgba(0, 132, 255, $opacity);
+  transition: fill 0.2s, stroke 0.2s;
+
+  text {
+    fill: $selectedColor;
+  }
+
+  input {
+    color: $selectedColor;
+  }
+}

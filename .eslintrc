@@ -1,0 +1,36 @@
+{
+  "extends": "eslint:recommended",
+  "ecmaFeatures": {
+    "jsx": true,
+    "modules": true
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "quotes": [2, "double"],
+    "strict": [2, "never"],
+    "indent": [2, 2, {"SwitchCase": 1}],
+    "curly": 0,
+    "require-jsdoc": 0,
+    "new-cap": 0,
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/react-in-jsx-scope": 2,
+    "key-spacing": 0,
+    "space-before-function-paren": [2, {"anonymous": "never", "named": "never"}],
+    "func-style": [2, "declaration", {"allowArrowFunctions": true}],
+    "no-multi-spaces": 0,
+    "no-use-before-define": [2, "nofunc"],
+    "brace-style": 0,
+    "callback-return": [2, ["callback", "cb"]]
+  },
+  "plugins": [
+    "react"
+  ],
+  "globals": {
+    "expect": false
+  }
+}
